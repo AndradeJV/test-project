@@ -36,7 +36,7 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(bookData)
       })
-      if (!response.ok) throw new Error('Erro ao criar livros')
+      if (!response.ok) throw new Error('Erro ao criar livros via api')
       await fetchBooks()
       setError(null)
     } catch (err) {
