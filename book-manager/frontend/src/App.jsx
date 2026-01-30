@@ -14,7 +14,7 @@ function App() {
     try {
       setLoading(true)
       const response = await fetch(API_URL)
-      if (!response.ok) throw new Error('Erro ao carregar livros')
+      if (!response.ok) throw new Error('Erro ao carregar livros - Revise seu payload')
       const data = await response.json()
       setBooks(data)
       setError(null)
