@@ -14,7 +14,7 @@ function App() {
     try {
       setLoading(true)
       const response = await fetch(API_URL)
-      if (!response.ok) throw new Error('Erro ao carregar livros')
+      if (!response.ok) throw new Error('Erro ao carregar livros - Revise seu PR')
       const data = await response.json()
       setBooks(data)
       setError(null)
@@ -36,7 +36,7 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(bookData)
       })
-      if (!response.ok) throw new Error('Erro ao criar livros - Revise seu envio')
+      if (!response.ok) throw new Error('Erro ao criar livros')
       await fetchBooks()
       setError(null)
     } catch (err) {
